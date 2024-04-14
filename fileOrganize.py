@@ -1,6 +1,8 @@
 import os
 import shutil
-path=r"C:\Users\sharm\Downloads\Python 3 Deep Dive (Part 1 - Functional)\[TutsNode.org] - Python 3 Deep Dive (Part 1 - Functional)\10 - Python Updates"
+path=r"C:\Users\sharm\Downloads"
 a=shutil.disk_usage(path)
 fileList=os.listdir(path)
-print(fileList)
+for i in fileList:
+    base_name, extension = os.path.splitext(i)
+    print(f"File Name: {i}, Extension: {extension}")
